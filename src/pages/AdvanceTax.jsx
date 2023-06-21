@@ -10,17 +10,23 @@ import { Llp } from "../components/AdvanceTaxForm/Llp";
 import { CoOperative } from "../components/AdvanceTaxForm/CoOperative";
 import { Individual } from "../components/AdvanceTaxForm/Individual";
 
-const initialState = {};
+//for HUF Form
+const initial_huf_State = {
+  opting_for_tax: "",
+  relief:"",
+  credit_utilized:"",
+}
 
 function AdvanceTax() {
   const [isDisabled, setIsDisabled] = useState(true);
-  const [formdata, setFormData] = useState(initialState);
+  // const [formdata, setFormData] = useState(initialState);
+  const [hufFormData, setHufFormData] = useState(initial_huf_State);
   const [isTaxPayer, setIsTaxPayer] = useState("");
 
   function handleChange(e) {
     const { name, value, type, checked } = e.target;
     const val = type === "checkbox" ? checked : +value;
-    setFormData({ ...formdata, [name]: val });
+    // setFormData({ ...formdata, [name]: val });
   }
 
   function handleSubmit(e) {
@@ -55,7 +61,7 @@ function AdvanceTax() {
           </div>
           {isTaxPayer === "" ? <Default handleChange={handleChange} /> : ""}
           {isTaxPayer === "Individual" ? <Individual handleChange={handleChange} /> : ""}
-          {isTaxPayer === "HUF" ? <Huf handleChange={handleChange} /> : ""}
+          {isTaxPayer === "HUF" ? <Huf setHufFormData={setHufFormData} hufFormData={hufFormData} /> : ""}
           {isTaxPayer === "AOPs/BOI" ? <Aops handleChange={handleChange} /> : ""}
           {isTaxPayer === "Domestic Company" ? <Domestic handleChange={handleChange} /> : ""}
           {isTaxPayer === "Foreign Company" ? <Foreign handleChange={handleChange} /> : ""}
