@@ -1,0 +1,109 @@
+.container {
+  width: 100%;
+}
+.sub_container {
+  padding: 5%;
+  max-width: 75%;
+}
+.heading {
+  background-color: #3b9ac6;
+  color: white;
+  max-width: 35%;
+  padding: 15px;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
+form {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  box-shadow: none;
+}
+form div label {
+  font-size: larger;
+}
+form div input {
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgb(207, 195, 195);
+  padding: 10px;
+}
+.bg_gray {
+  background-color: #eaeaea;
+}
+#exempted_taxable input {
+  font-weight: bolder;
+}
+.checkbox {
+  display: flex;
+  width: 200px;
+  justify-content: start;
+  gap: 5px;
+  box-shadow: none;
+  height: 40px;
+}
+.calculate_reset_btn {
+  box-shadow: none;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.calculate_reset_btn button {
+  padding: 10px 20px;
+  font-size: large;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.calculate_btn {
+  background-color: #fe6c5f;
+}
+.reset_btn {
+  background-color: #a0a1a1;
+}
+input:disabled {
+  cursor: not-allowed;
+  background-color: #e0e0e0;
+}
+select {
+  width: 190px;
+  padding: 8px;
+}
+.more_options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 0%;
+}
+.more_options span {
+  color: white;
+  background-color: black;
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.two_input_label {
+  padding: 0;
+}
+
+#small_input {
+  justify-content: left;
+}
+#small_input input:first-child {
+  width: 12%;
+}
+#small_input input:last-child {
+  width: 30%;
+}
+.small_input {
+  justify-content: left;
+  gap: 20px;
+}
